@@ -1,0 +1,11 @@
+<%- include("partial/header"); -%>
+<h1>Home</h1>
+<p><%= keyHome %></p>
+<% array.forEach(function(ele){ %>
+    <h1><%=ele.posttitle%></h1>
+    <p>
+        <%= ele.postbody.substring(0,100)+ " ..." %>
+        <a href="/posts/<%=ele.posttitle%>">Read More</a>
+    </p>
+<% }) %>
+<%- include("partial/footer"); -%>
